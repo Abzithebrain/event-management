@@ -40,10 +40,39 @@
       <div class="container">
         <h1 class="display-4 fw-normal">Gestion d'événements simplifée</h1>
         <p class="lead text-muted">Organisez facilement vos événements en ligne avec notre application web.</p>
-        <a href="#" class="btn btn-primary my-2">Créer un événement</a>
+        <a href="#" class="btn btn-primary my-2" data-bs-toggle="modal" data-bs-target="#formModal">Créer un événement</a>
       </div>
     </section>
-
+    <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="formModalLabel">Créer un événement</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="eventName" class="form-label">Nom de l'événement</label>
+                <input type="text" class="form-control" id="eventName" required>
+              </div>
+              <div class="mb-3">
+                <label for="eventDate" class="form-label">Date de l'événement</label>
+                <input type="date" class="form-control" id="eventDate" required>
+              </div>
+              <div class="mb-3">
+                <label for="eventDescription" class="form-label">Description de l'événement</label>
+                <textarea class="form-control" id="eventDescription" rows="3" required></textarea>
+              </div>
+              <button type="submit" class="btn w-100 btn-primary">Soumettre</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="container my-5">
       <h2 class="mb-4">Événements populaires</h2>
       <div class="row row-cols-1 row-cols-md-3 g-4">
