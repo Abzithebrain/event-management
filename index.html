@@ -3,53 +3,241 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gestion d'Événements</title>
+  <title>Gestion d'événements</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Gestion d'Événements</a>
-    <div class="collapse navbar-collapse">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item"><a class="nav-link" href="#">Accueil</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Créer Événement</a></li>
-      </ul>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="#">Gestion d'événements</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Événements</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Créer un événement</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Se connecter</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="jumbotron text-center bg-light py-5">
+      <div class="container">
+        <h1 class="display-4 fw-normal">Gestion d'événements simplifée</h1>
+        <p class="lead text-muted">Organisez facilement vos événements en ligne avec notre application web.</p>
+        <a href="#" class="btn btn-primary my-2" data-bs-toggle="modal" data-bs-target="#formModal">Créer un événement</a>
+      </div>
+    </section>
+    <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="formModalLabel">Créer un événement</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="eventName" class="form-label">Nom de l'événement</label>
+                <input type="text" class="form-control" id="eventName" required>
+              </div>
+              <div class="mb-3">
+                <label for="eventDate" class="form-label">Date de l'événement</label>
+                <input type="date" class="form-control" id="eventDate" required>
+              </div>
+              <div class="mb-3">
+                <label for="eventTime" class="form-label">Heure de l'événement</label>
+                <input type="time" class="form-control" id="eventTime" required>
+              </div>
+              <div class="mb-3">
+                <label for="eventLocation" class="form-label">Lieu de l'événement</label>
+                <input type="text" class="form-control" id="eventLocation" required>
+              </div>
+              <div class="mb-3">
+                <label for="eventDescription" class="form-label">Description de l'événement</label>
+                <textarea class="form-control" id="eventDescription" rows="3" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">Soumettre</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+          </div>
+        </div>
+      </div>
     </div>
-  </nav>
+    <div class="container my-5">
+      <h2 class="mb-4">Événements populaires</h2>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="https://picsum.photos/id/1/800/600" class="card-img-top" alt="Événement 1">
+            <div class="card-body">
+              <h5 class="card-title">Événement 1</h5>
+              <p class="card-text">Description de l'événement 1.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">En savoir plus</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="https://picsum.photos/id/2/800/600" class="card-img-top" alt="Événement 2">
+            <div class="card-body">
+              <h5 class="card-title">Événement 2</h5>
+              <p class="card-text">Description de l'événement 2.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">En savoir plus</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="https://picsum.photos/id/3/800/600" class="card-img-top" alt="Événement 3">
+            <div class="card-body">
+              <h5 class="card-title">Événement 3</h5>
+              <p class="card-text">Description de l'événement 3.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">En savoir plus</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="img/1.webp" class="card-img-top" alt="Événement 4">
+            <div class="card-body">
+              <h5 class="card-title">Événement 4</h5>
+              <p class="card-text">Description de l'événement 4.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">En savoir plus</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <img src="img/2.webp" class="card-img-top" alt="Événement 5">
+            <div class="card-body">
+              <h5 class="card-title">Événement 5</h5>
+              <p class="card-text">Description de l'événement 5.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">En savoir plus</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="img/3.webp" class="card-img-top" alt="Événement 6">
+            <div class="card-body">
+              <h5 class="card-title">Événement 6</h5>
+              <p class="card-text">Description de l'événement 6.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">En savoir plus</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="img/4.webp" class="card-img-top" alt="Événement 7">
+            <div class="card-body">
+              <h5 class="card-title">Événement 7</h5>
+              <p class="card-text">Description de l'événement 7.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">En savoir plus</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="img/5.jpg" class="card-img-top" alt="Événement 8">
+            <div class="card-body">
+              <h5 class="card-title">Événement 8</h5>
+              <p class="card-text">Description de l'événement 8.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">En savoir plus</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <img src="img/6.webp" class="card-img-top" alt="Événement 9">
+            <div class="card-body">
+              <h5 class="card-title">Événement 9</h5>
+              <p class="card-text">Description de l'événement 9.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">En savoir plus</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="img/7.webp" class="card-img-top" alt="Événement 10">
+            <div class="card-body">
+              <h5 class="card-title">Événement 10</h5>
+              <p class="card-text">Description de l'événement 10.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">En savoir plus</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <img src="img/8.webp" class="card-img-top" alt="Événement 11">
+            <div class="card-body">
+              <h5 class="card-title">Événement 11</h5>
+              <p class="card-text">Description de l'événement 11.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">En savoir plus</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <img src="img/9.webp" class="card-img-top" alt="Événement 12">
+            <div class="card-body">
+              <h5 class="card-title">Événement 12</h5>
+              <p class="card-text">Description de l'événement 12.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">En savoir plus</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 
-  <div class="container mt-5">
-    <h1>Créer ou Modifier un Événement</h1>
-    <form id="eventForm">
-      <div class="mb-3">
-        <label for="eventName" class="form-label">Nom de l'Événement</label>
-        <input type="text" class="form-control" id="eventName" required>
-      </div>
-      <div class="mb-3">
-        <label for="eventDescription" class="form-label">Description</label>
-        <textarea class="form-control" id="eventDescription" rows="3" required></textarea>
-      </div>
-      <div class="mb-3">
-        <label for="eventDate" class="form-label">Date</label>
-        <input type="date" class="form-control" id="eventDate" required>
-      </div>
-      <div class="mb-3">
-        <label for="eventTime" class="form-label">Heure</label>
-        <input type="time" class="form-control" id="eventTime" required>
-      </div>
-      <div class="mb-3">
-        <label for="eventLocation" class="form-label">Lieu</label>
-        <input type="text" class="form-control" id="eventLocation" required>
-      </div>
-      <button type="submit" class="btn btn-primary">Enregistrer</button>
-    </form>
-  </div>
-
-  <div class="container mt-5">
-    <h1>Calendrier des Événements</h1>
-    <div id="eventsList" class="list-group"></div>
-  </div>
+  <footer class="footer bg-light py-3">
+    <div class="container">
+      <span class="text-muted">© 2024 Gestion d'événements. Tous droits réservés.</span>
+    </div>
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  <script src="js/scripts.js"></script>
 </body>
 </html>
