@@ -18,6 +18,16 @@ document.addEventListener('DOMContentLoaded', function () {
         // Afficher le jumbotron
         var jumbotronSection = document.getElementById('jumbotronSection');
         jumbotronSection.classList.remove('d-none');
+
+        // Changer le lien de connexion en déconnexion
+      var loginLink = document.getElementById('loginLink');
+      loginLink.textContent = 'Se déconnecter';
+      loginLink.removeAttribute('data-bs-toggle');
+      loginLink.removeAttribute('data-bs-target');
+      loginLink.setAttribute('href', '#');
+      loginLink.addEventListener('click', function() {
+        location.reload();
+      });
   
         
       } else {
