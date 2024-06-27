@@ -1,5 +1,17 @@
 .card-img-top {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+  height: 350px; /* Vous pouvez ajuster cette hauteur en fonction de vos besoins */
+  width: 100%;
+  object-fit: contain;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  background-color: #f8f9fa; /* Pour un arrière-plan neutre */
+} 
+  
+  .card {
+    border: none;
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
   }
