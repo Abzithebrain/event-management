@@ -1,5 +1,5 @@
 .card-img-top {
-  height: 350px; /* Vous pouvez ajuster cette hauteur en fonction de vos besoins */
+  height: 350px; 
   width: 100%;
   object-fit: contain;
   border-top-left-radius: 0.5rem;
@@ -14,4 +14,11 @@
   
   .card:hover {
     transform: scale(1.05);
+  }
+
+  #notificationsDropdown::after {
+    font-family: 'Font Awesome 5 Free'; 
+    font-weight: 900; 
+    content: "\f0f3"; 
+    margin-left: 0.5em;
   }
