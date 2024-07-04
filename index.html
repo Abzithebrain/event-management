@@ -6,16 +6,17 @@
   <title>Gestion d'événements</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="jumbotron.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" >
 </head>
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
       <div class="container">
         <a class="navbar-brand" href="#">Gestion d'événements</a>
         <div class="d-flex ms-auto">
           <div class="dropdown me-3">
-            <a class="nav-link btn btn-outline-light dropdown-toggle" href="#" id="notificationsDropdown" role="button" data-bs-toggle="dropdown" >
+            <a class="nav-link btn btn-outline-light dropdown-toggle" href="#" id="notificationsDropdown" role="button" data-bs-toggle="dropdown">
               Notifications
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="notificationsDropdown">
@@ -26,15 +27,15 @@
               <li><a class="dropdown-item" href="#">Notification 5: Rappel : Événement demain à 10h.</a></li>
             </ul>
           </div>
-          <a class="nav-link btn btn-outline-light " href="#" id="loginLink" data-bs-toggle="modal" data-bs-target="#loginModal">Se connecter</a>
+          <a class="nav-link btn btn-outline-light" href="#" id="loginLink" data-bs-toggle="modal" data-bs-target="#loginModal">Se connecter</a>
         </div>
       </div>
     </nav>
   </header>
 
   <main>
-    <div class="container my-3">
-      <div id="loginAlert" class="alert alert-success alert-dismissible fade show d-none" role="alert">
+    <div class="container mb-3 mt-5">
+      <div id="loginAlert" class="alert alert-success alert-dismissible fade show d-none mt-4" role="alert">
         <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
         Connexion effectuée avec succès !
       </div>
@@ -43,7 +44,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="loginModalLabel">Connexion</h5>
+            <h5 class="modal-title w-100 text-center" id="loginModalLabel">Connexion</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -114,7 +115,7 @@
       </div>
     </div>
     <div class="container-fluid my-5">
-      <h2 class="mb-4">Événements populaires</h2>
+      <h2 class="mb-4 mt-5 pt-4" id="eventspop">Événements populaires</h2>
       <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4">
         <div class="col">
           <div class="card shadow-sm">
@@ -122,6 +123,9 @@
             <div class="card-body">
               <h5 class="card-title">Événement 1</h5>
               <p class="card-text">Description de l'événement 1.</p>
+              <p class="card-text">
+                <i class="fas fa-calendar"></i> Event date and time
+              </p>
               <div class="d-flex justify-content-between align-items-center">
                 <a href="#" class="btn btn-primary">En savoir plus</a>
               </div>
@@ -134,6 +138,9 @@
             <div class="card-body">
               <h5 class="card-title">Événement 2</h5>
               <p class="card-text">Description de l'événement 2.</p>
+              <p class="card-text">
+                <i class="fas fa-calendar"></i> Event date and time
+              </p>
               <div class="d-flex justify-content-between align-items-center">
                 <a href="#" class="btn btn-primary">En savoir plus</a>
               </div>
@@ -146,6 +153,9 @@
             <div class="card-body">
               <h5 class="card-title">Événement 3</h5>
               <p class="card-text">Description de l'événement 3.</p>
+              <p class="card-text">
+                <i class="fas fa-calendar"></i> Event date and time
+              </p>
               <div class="d-flex justify-content-between align-items-center">
                 <a href="#" class="btn btn-primary">En savoir plus</a>
               </div>
@@ -158,6 +168,9 @@
             <div class="card-body">
               <h5 class="card-title">Événement 4</h5>
               <p class="card-text">Description de l'événement 4.</p>
+              <p class="card-text">
+                <i class="fas fa-calendar"></i> Event date and time
+              </p>
               <div class="d-flex justify-content-between align-items-center">
                 <a href="#" class="btn btn-primary">En savoir plus</a>
               </div>
@@ -170,6 +183,9 @@
             <div class="card-body">
               <h5 class="card-title">Événement 5</h5>
               <p class="card-text">Description de l'événement 5.</p>
+              <p class="card-text">
+                <i class="fas fa-calendar"></i> Event date and time
+              </p>
               <div class="d-flex justify-content-between align-items-center">
                 <a href="#" class="btn btn-primary">En savoir plus</a>
               </div>
@@ -182,6 +198,9 @@
             <div class="card-body">
               <h5 class="card-title">Événement 6</h5>
               <p class="card-text">Description de l'événement 6.</p>
+              <p class="card-text">
+                <i class="fas fa-calendar"></i> Event date and time
+              </p>
               <div class="d-flex justify-content-between align-items-center">
                 <a href="#" class="btn btn-primary">En savoir plus</a>
               </div>
@@ -194,6 +213,9 @@
             <div class="card-body">
               <h5 class="card-title">Événement 7</h5>
               <p class="card-text">Description de l'événement 7.</p>
+              <p class="card-text">
+                <i class="fas fa-calendar"></i> Event date and time
+              </p>
               <div class="d-flex justify-content-between align-items-center">
                 <a href="#" class="btn btn-primary">En savoir plus</a>
               </div>
@@ -206,6 +228,9 @@
             <div class="card-body">
               <h5 class="card-title">Événement 8</h5>
               <p class="card-text">Description de l'événement 8.</p>
+              <p class="card-text">
+                <i class="fas fa-calendar"></i> Event date and time
+              </p>
               <div class="d-flex justify-content-between align-items-center">
                 <a href="#" class="btn btn-primary">En savoir plus</a>
               </div>
@@ -218,6 +243,9 @@
             <div class="card-body">
               <h5 class="card-title">Événement 9</h5>
               <p class="card-text">Description de l'événement 9.</p>
+              <p class="card-text">
+                <i class="fas fa-calendar"></i> Event date and time
+              </p>
               <div class="d-flex justify-content-between align-items-center">
                 <a href="#" class="btn btn-primary">En savoir plus</a>
               </div>
@@ -230,6 +258,9 @@
             <div class="card-body">
               <h5 class="card-title">Événement 10</h5>
               <p class="card-text">Description de l'événement 10.</p>
+              <p class="card-text">
+                <i class="fas fa-calendar"></i> Event date and time
+              </p>
               <div class="d-flex justify-content-between align-items-center">
                 <a href="#" class="btn btn-primary">En savoir plus</a>
               </div>
@@ -242,6 +273,9 @@
             <div class="card-body">
               <h5 class="card-title">Événement 11</h5>
               <p class="card-text">Description de l'événement 11.</p>
+              <p class="card-text">
+                <i class="fas fa-calendar"></i> Event date and time
+              </p>
               <div class="d-flex justify-content-between align-items-center">
                 <a href="#" class="btn btn-primary">En savoir plus</a>
               </div>
@@ -254,6 +288,9 @@
             <div class="card-body">
               <h5 class="card-title">Événement 12</h5>
               <p class="card-text">Description de l'événement 12.</p>
+              <p class="card-text">
+                <i class="fas fa-calendar"></i> Event date and time
+              </p>
               <div class="d-flex justify-content-between align-items-center">
                 <a href="#" class="btn btn-primary">En savoir plus</a>
               </div>

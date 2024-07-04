@@ -19,6 +19,11 @@ document.addEventListener('DOMContentLoaded', function () {
         var jumbotronSection = document.getElementById('jumbotronSection');
         jumbotronSection.classList.remove('d-none');
 
+        //enlevez le padding de l'élément evenements populaires
+        var eventspop = document.getElementById('eventspop');
+        eventspop.classList.remove('pt-4');
+        eventspop.classList.remove('mt-5');
+
         // Changer le lien de connexion en déconnexion
       var loginLink = document.getElementById('loginLink');
       loginLink.textContent = 'Se déconnecter';
